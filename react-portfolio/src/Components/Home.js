@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import './home.css';
 
 const HomeContainer = styled.div`
   display: flex;
@@ -14,9 +15,8 @@ const HomeImg = styled.img`
 
 const Logo = styled.img`
   width: 20%
+  padding-top: 10px
 `;
-
-          // <HomeImg className="home_img" alt="underground" src={require("./../Assets/Images/undergroundPNG.png")} />
 
 const ImageContainer = styled.div`
   height: 100vh;
@@ -58,6 +58,7 @@ const LinkDiv = styled.div`
 
   &:hover{
     background: grey;
+    color: #fff;
     font-size: 7em;
   }
 `;
@@ -65,7 +66,7 @@ const LinkDiv = styled.div`
 
 const StyledLink = styled(NavLink)`
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   font-family: "Gill Sans MT";
 `;
@@ -75,25 +76,28 @@ const Home = () => {
   return(
     <HomeContainer>
         <ImageContainer>
-          <HomeImg alt="underground" src={require("./../Assets/Images/underground.png")} />
+          <HomeImg className="homeImg" alt="underground" src={require("./../Assets/Images/underground.png")} />
         </ImageContainer>
         <InfoContainer>
           <LogoContainer>
-            <Logo alt="logo" src={require("./../Assets/Images/logo_transparent.png")} />
+            <NavLink to="/"><Logo alt="logo" src={require("./../Assets/Images/logo_transparent.png")} /></NavLink>
           </LogoContainer>
           <LinkContainer>
-            <LinkDiv>
-              <StyledLink>Who </StyledLink>
-            </LinkDiv>
-            <LinkDiv>
-              <StyledLink>What</StyledLink>
-            </LinkDiv>
-            <LinkDiv>
-              <StyledLink>Where</StyledLink>
-            </LinkDiv>
-
-
-
+            <StyledLink to="/about" className="who">
+              <LinkDiv>
+                Who
+              </LinkDiv>
+            </StyledLink>
+            <StyledLink to="/projects" className="what">
+              <LinkDiv>
+                What
+              </LinkDiv>
+            </StyledLink>
+            <StyledLink to="/experience" className="where">
+              <LinkDiv>
+                Where
+              </LinkDiv>
+            </StyledLink>
           </LinkContainer>
         </InfoContainer>
     </HomeContainer>
