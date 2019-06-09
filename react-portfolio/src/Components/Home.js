@@ -6,6 +6,10 @@ import './home.css';
 const HomeContainer = styled.div`
   display: flex;
   height: 100%;
+
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
 `;
 
 const HomeImg = styled.img`
@@ -14,17 +18,30 @@ const HomeImg = styled.img`
 `;
 
 const Logo = styled.img`
-  width: 20%
+  width: 30%
   padding-top: 10px
+
+  @media (max-width: 1200px){
+    width: 40%;
+  }
+
+  @media (max-width: 800px){
+    width: 30%;
+  }
 `;
 
 const ImageContainer = styled.div`
   height: 100vh;
+  min-height: 1000px;
   width: 50%;
   max-width: 1000px;
   background: #000;
   object-fit: fill;
   background-size: inherit;
+
+  @media (max-width: 800px){
+    width: 100%;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -32,6 +49,10 @@ const InfoContainer = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 800px){
+    width: 100%;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -39,6 +60,10 @@ const LogoContainer = styled.div`
   height: 30%;
   display: block;
   padding-top: 3%;
+
+  @media (max-width: 1200px){
+    height: 20%;
+  }
 `;
 
 const LinkContainer = styled.div`
@@ -48,6 +73,11 @@ const LinkContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-top: 20%;
+
+  @media (max-width: 800px){
+    margin-top: 10%;
+    margin-bottom: 100px;
+  }
 `;
 
 const LinkDiv = styled.div`
