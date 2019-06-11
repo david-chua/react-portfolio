@@ -19,18 +19,19 @@ const NavContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
+  @media(max-width: 1000px){
+    border-bottom: 2px solid #063A7C;
+  }
 
 `;
 
 const NavLinksContainer = styled.div`
-  width: 50%;
+  width: 80%;
   display:flex;
   align-items: center;
   justify-content: space-around;
+  padding-right: 30px;
 
-  @media (max-width: 1200px){
-    width: 70%;
-  }
 
   @media (max-width: 1000px){
     width: 100%;
@@ -40,6 +41,7 @@ const NavLinksContainer = styled.div`
 
 const NavLinkContainer = styled.div`
   padding: 0px 20px;
+
 
   @media( max-width: 1000px){
     padding: 20px 0px;
@@ -63,6 +65,8 @@ const NavLinks = styled(NavLink)`
     font-size: 1.3em;
   }
   @media (max-width: 1000px){
+    width: 100%;
+    border-bottom: 2px solid #063A7C;
     &.active{
       width: 100%;
       color: #FFF;;
@@ -100,17 +104,22 @@ const NavBar = () => {
         </NavLinks>
         <NavLinks exact to="/about">
           <NavLinkContainer>
-           About
+            About
           </NavLinkContainer>
         </NavLinks>
         <NavLinks exact to="/projects">
           <NavLinkContainer>
-           Projects
+            Projects
            </NavLinkContainer>
         </NavLinks>
         <NavLinks exact to="/experience">
           <NavLinkContainer>
-          Experience
+            Experience
+          </NavLinkContainer>
+        </NavLinks>
+        <NavLinks exact to="/contact">
+          <NavLinkContainer>
+            Contact
           </NavLinkContainer>
         </NavLinks>
       </NavLinksContainer>
