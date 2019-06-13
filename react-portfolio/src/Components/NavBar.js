@@ -55,10 +55,11 @@ const NavLinks = styled(NavLink)`
   font-size: 1.4em;
   padding: 20px 30px;
 
+
   &.active{
     color: #FFF;
     background: #063A7C;
-    border-radius: 10px;
+    transform: skewx(20deg)
   }
 
   @media (max-width: 1200px){
