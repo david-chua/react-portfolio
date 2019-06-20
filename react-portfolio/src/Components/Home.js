@@ -34,7 +34,6 @@ const ImageContainer = styled.div`
   height: 100vh;
   min-height: 1000px;
   width: 50%;
-  max-width: 1000px;
   background: #000;
   object-fit: fill;
   background-size: inherit;

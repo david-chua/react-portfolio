@@ -59,7 +59,8 @@ const NavLinks = styled(NavLink)`
   &.active{
     color: #FFF;
     background: #063A7C;
-    transform: skewx(20deg)
+    border-radius: 50px;
+    /* transform: skewx(20deg) */
   }
 
   @media (max-width: 1200px){

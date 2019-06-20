@@ -132,10 +132,13 @@ class About extends React.Component{
 
             {this.state.curiosity &&
               <Curiosity className="curiosity">
-                <p> I've been a curious person throughout most of my life. I studied Biology because I was interested in learning medicine and the theory of evolution.</p>
-                <p> I studied Chinese because the other half of my family comes from that background yet I've never had the experience of meeting them or experiencing that culture firsthand</p>
-                <p> Throughout my life curiosity has always allowed me to excel because I wanted to learn more. If I was born before the age of internet, I can see myself being an archeologist with my love of learning about life and culture.</p>
-                <p> I studied programming because I wanted to know how computer works. I wanted to create things. </p>
+                <p> I'm just a curious guy who loves to learn. </p>
+                <p> Not only did my educational background stem from my curiousity, it also is the reason for why I'm in the programming world. </p>
+                <p> Being a biology major, programming was something I never really thought about until I became a technical recruiter. It opened my world into learning the different aspects of technology.</p>
+                <p> And from there, the learning never stops. And I'm happy with that. </p>
+
+
+
               </Curiosity>
             }
             {this.state.passionate &&
