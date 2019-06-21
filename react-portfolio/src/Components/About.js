@@ -8,9 +8,7 @@ const AboutContainer = styled.div`
   height: 100vh;
   flex-direction: row-reverse;
   align-items: center;
-  background: url(${smoke});
-  background-repeat: no-repeat;
-  background-size: 50% 100%
+
 
   h1{
     text-align: center;
@@ -40,8 +38,12 @@ const AboutImg = styled.img`
 
 const AboutInfoDiv = styled.div`
   width: 50%;
+  height: 100%;
   font-family: "Gill Sans MT";
   color: #F5F4E9;
+  background: url(${smoke});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
   @media(max-width: 1000px){
     width: 90%;
@@ -53,7 +55,7 @@ const AboutInfoDiv = styled.div`
 const AboutInfo = styled.div`
   width: 50%;
   font-family: "Gill Sans MT";
-  margin: 0 auto;
+  margin: 30% auto;
 
   & h1{
     text-align: center;

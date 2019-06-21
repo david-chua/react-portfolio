@@ -9,7 +9,6 @@ const NavContainer = styled.div`
   align-self: center;
   justify-content: space-between;
   padding-bottom: 20px;
-  border-bottom: 3px solid black;
 
   @media(max-width: 1000px){
     flex-direction: column;
