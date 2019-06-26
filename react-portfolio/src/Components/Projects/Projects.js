@@ -2,15 +2,18 @@ import React from 'react';
 import NavBar from './../NavBar';
 import styled from 'styled-components';
 import ProjectItem from './ProjectItem';
-import trainingForGains from './../../Assets/Images/trainingforgains_mac.png';
-import cooking from './../../Assets/Images/cooking_user_mac.png';
+import ProjectDetails from './ProjectDetail';
+import trainingForGains from './../../Assets/Images/Mac/trainingforgains_mac.png';
+import cooking from './../../Assets/Images/Mac/cooking_user_mac.png';
 
 const ProjectData = [
   {
+    id: 3,
     img: trainingForGains,
     title: 'Training For Gains'
   },
   {
+    id: 4,
     img: cooking,
     title: "What's Cooking"
   }
@@ -33,20 +36,37 @@ const ProjectMiniiContainer = styled.div`
 `;
 
 
-const Projects = () => {
-  return(
-    <div>
-      <NavBar />
-      <div>
-        <ProjectMiniiContainer>
-          {ProjectData.map(item =>{
-              return <ProjectItem item={item} />
-          })}
-        </ProjectMiniiContainer>
-      </div>
+class Projects extends React.Component {
 
-    </div>
-  )
+  constructor(props){
+    super(props)
+    this.state={
+      chosenProject: []
+    }
+  }
+
+  chooseProject = item => {
+    this.setState({
+      chosenProject: item
+    })
+  }
+
+  render(){
+    return(
+      <div>
+        <NavBar />
+        <div>
+          <ProjectMiniiContainer>
+            {ProjectData.map(item =>{
+                return <ProjectItem key={item.id} item={item} chooseProject={this.chooseProject} />
+            })}
+          </ProjectMiniiContainer>
+          <ProjectDetails chosenProject={this.state.chosenProject}/>
+        </div>
+
+      </div>
+    )
+  }
 }
 
 export default Projects
