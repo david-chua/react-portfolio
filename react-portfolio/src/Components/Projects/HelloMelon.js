@@ -5,6 +5,8 @@ import helloMelonHome from './../../Assets/Images/HelloMelon/home.png';
 import coachPage from './../../Assets/Images/HelloMelon/coach.png';
 import calendarPage from './../../Assets/Images/HelloMelon/calendar.png';
 
+import ProjectLinks from './ProjectLinks';
+
 
 
 const HelloMelonContainer = styled.div`
@@ -101,6 +103,7 @@ class HelloMelon extends React.Component {
             </Carousel.Item>
           </Carousel>
         </CarouselContainer>
+        <ProjectLinks />
         <TechInfo>
           <h2> The following Tech was used with this project </h2>
         </TechInfo>
