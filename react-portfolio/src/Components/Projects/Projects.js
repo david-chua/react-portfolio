@@ -30,6 +30,7 @@ const ProjectMiniiContainer = styled.div`
     display: flex;
     overflow-x: scroll;
     overflow-y: none;
+    text-align: center;
     white-space: nowrap;
     padding: 10px 50px;
 

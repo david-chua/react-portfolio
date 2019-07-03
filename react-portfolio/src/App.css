@@ -50,3 +50,11 @@ table {
 .app_home{
 	text-align: left;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+	background-color: black !important;
+	margin: 10px !important;
+	width: 30px !important;
+	height: 20px !important;
+	margin: 20px !important;
+}
