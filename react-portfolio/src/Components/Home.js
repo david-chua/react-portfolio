@@ -6,6 +6,7 @@ import './home.css';
 const HomeContainer = styled.div`
   display: flex;
   height: 100%;
+  text-align: center;
 
   @media (max-width: 800px){
     flex-direction: column;

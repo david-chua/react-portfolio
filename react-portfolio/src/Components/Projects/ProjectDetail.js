@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import TrainingForGains from "./TrainingForGains";
+import HelloMelon from "./HelloMelon";
 
 class ProjectDetails extends React.Component{
   constructor(props){
@@ -14,7 +15,7 @@ class ProjectDetails extends React.Component{
     return(
       <div>
     {/*  {id === 3 && <TrainingForGains />} */}
-      <TrainingForGains />
+    <HelloMelon />
       </div>
     )
   }

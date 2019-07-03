@@ -5,8 +5,14 @@ import ProjectItem from './ProjectItem';
 import ProjectDetails from './ProjectDetail';
 import trainingForGains from './../../Assets/Images/Mac/trainingforgains_mac.png';
 import cooking from './../../Assets/Images/Mac/cooking_user_mac.png';
+import helloMelon from './../../Assets/Images/Mac/hellomelon_mac.png';
 
 const ProjectData = [
+  {
+    id: 1,
+    img: helloMelon,
+    title: 'Hello Melon'
+  },
   {
     id: 3,
     img: trainingForGains,

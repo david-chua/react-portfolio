@@ -8,6 +8,7 @@ const AboutContainer = styled.div`
   height: 100%;
   flex-direction: row;
   align-items: center;
+  text-align: center;
 
 
   h1{
