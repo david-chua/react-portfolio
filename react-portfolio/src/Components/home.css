@@ -1,17 +1,17 @@
-.who{
+.homewho{
   animation-name: slidein;
   animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
-.what{
+.homewhat{
   animation-name: slidein;
   animation-duration: 3s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
-.where{
+.homewhere{
   animation-name: slidein;
   animation-duration: 3s;
   animation-delay: 2s;

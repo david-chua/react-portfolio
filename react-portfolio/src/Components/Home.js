@@ -113,17 +113,17 @@ const Home = () => {
             <NavLink to="/"><Logo alt="logo" src={require("./../Assets/Images/logo_transparent.png")} /></NavLink>
           </LogoContainer>
           <LinkContainer>
-            <StyledLink to="/about" className="who">
+            <StyledLink to="/about" className="homewho">
               <LinkDiv>
                 Who
               </LinkDiv>
             </StyledLink>
-            <StyledLink to="/projects" className="what">
+            <StyledLink to="/projects" className="homewhat">
               <LinkDiv>
                 What
               </LinkDiv>
             </StyledLink>
-            <StyledLink to="/experience" className="where">
+            <StyledLink to="/experience" className="homewhere">
               <LinkDiv>
                 Where
               </LinkDiv>
