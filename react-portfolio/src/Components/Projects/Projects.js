@@ -26,13 +26,13 @@ const ProjectData = [
 
 ]
 
-const ProjectMiniiContainer = styled.div`
+const ProjectMiniContainer = styled.div`
     display: flex;
     overflow-x: scroll;
     overflow-y: none;
     text-align: center;
     white-space: nowrap;
-    padding: 10px 50px;
+    padding: 50px 50px;
 
     &:: -webkit-slider-thumb{
       height: 15px;
@@ -63,11 +63,11 @@ class Projects extends React.Component {
       <div>
         <NavBar />
         <div>
-          <ProjectMiniiContainer>
+          <ProjectMiniContainer>
             {ProjectData.map(item =>{
                 return <ProjectItem key={item.id} item={item} chooseProject={this.chooseProject} />
             })}
-          </ProjectMiniiContainer>
+          </ProjectMiniContainer>
           <ProjectDetails chosenProject={this.state.chosenProject}/>
         </div>
 

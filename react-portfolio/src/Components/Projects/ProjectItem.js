@@ -7,15 +7,31 @@ const ProjectItemContainer = styled.div`
   h2 {
     text-align: center;
   }
+
+  @media(max-width: 1000px){
+    h2 {
+      font-size: 1.7em;
+    }
+  }
 `;
 
 const ProjectImagecontainer = styled.img`
-  width: 150px
-  height: 150px
+  width: 150px;
+  height: 150px;
 
   &:hover {
     width: 200px;
     height: 200px;
+  }
+
+  @media(max-width: 1000px){
+    width: 250px;
+    height: 250px;
+
+    &:hover {
+      width: 300px;
+      height: 300px;
+    }
   }
 `;
 

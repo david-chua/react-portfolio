@@ -10,7 +10,6 @@ const AboutContainer = styled.div`
   align-items: center;
   text-align: center;
 
-
   h1{
     text-align: center;
   }
@@ -49,6 +48,7 @@ const AboutInfoDiv = styled.div`
   @media(max-width: 1000px){
     width: 90%;
     color: black;
+    height: 500px;
   }
 `;
 
@@ -80,8 +80,8 @@ const AboutInfo = styled.div`
   @media(max-width: 1000px){
     width: 100%;
     margin: 10% auto;
-
   }
+
 `;
 
 

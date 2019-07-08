@@ -1,10 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const ProjectButton = styled.button`
+
+
+`;
+
 const ProjectLinks = props => {
   return(
     <div>
-    Project Links Where
+      {props.frontEnd &&
+        <ProjectButton>
+          Front End Github
+        </ProjectButton>}
     </div>
   )
 }

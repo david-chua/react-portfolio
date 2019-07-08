@@ -20,6 +20,7 @@ const NavContainer = styled.div`
 const LogoContainer = styled.div`
   @media(max-width: 1000px){
     border-bottom: 2px solid #063A7C;
+    text-align: center;
   }
 
 `;
@@ -35,6 +36,7 @@ const NavLinksContainer = styled.div`
   @media (max-width: 1000px){
     width: 100%;
     flex-direction: column;
+    text-align: center;
   }
 `;
 
@@ -70,7 +72,8 @@ const NavLinks = styled(NavLink)`
     border-bottom: 2px solid #063A7C;
     &.active{
       width: 100%;
-      color: #FFF;;
+      color: #FFF;
+      border-radius: 0px;
       background: #063A7C;
     }
   }
