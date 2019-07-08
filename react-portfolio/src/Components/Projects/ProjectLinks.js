@@ -36,7 +36,7 @@ const ProjectLinks = props => {
   return(
     <ProjectLinksContainer>
       {props.liveSite &&
-          <a target="_blank" href={props.liveSite}>
+          <a target="_blank" rel="noopener noreferrer" href={props.liveSite}>
             <ProjectButton background={props.background} hoverColor={props.hoverColor}>
               Demo
             </ProjectButton>
@@ -44,14 +44,14 @@ const ProjectLinks = props => {
 
       }
       {props.FEGithub &&
-        <a target="_blank" href={props.FEGithub}>
+        <a target="_blank" rel="noopener noreferrer" href={props.FEGithub}>
           <ProjectButton background={props.background} hoverColor={props.hoverColor}>
             Front End Github
           </ProjectButton>
         </a>
       }
       {props.BEGithub &&
-        <a target="_blank" href={props.BEGithub}>
+        <a target="_blank" rel="noopener noreferrer" href={props.BEGithub}>
           <ProjectButton background={props.background} hoverColor={props.hoverColor}>
             Back End Github
           </ProjectButton>

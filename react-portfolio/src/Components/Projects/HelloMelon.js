@@ -112,9 +112,7 @@ class HelloMelon extends React.Component {
     return <HelloHome className="carousel" src={this.state.carousel[this.state.selectedCarouselIndex]} alt="project image"/>
   }
   render(){
-    const { index, direction } = this.state;
     const purple = '#5E366A';
-    const white = '#FFF';
     const green="#60B5A9";
     const Links = {
         liveSite: 'https://nutrition-tracker-lambda.netlify.com/',
@@ -138,8 +136,7 @@ class HelloMelon extends React.Component {
             FEGithub={Links.FEGithub}
             BEGithub={Links.BEGithub}
             background = {purple}
-            hoverColor={green}
-            font= {white}/>
+            hoverColor={green}/>
         </TechInfo>
       </HelloMelonContainer>
     )
