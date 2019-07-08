@@ -51,9 +51,8 @@ const HelloHome = styled.img`
 
 const TechInfo = styled.div`
   width: 90%;
-  margin: 0 auto;
-  text-align: left;
-  border-top: 1px solid black;
+  margin: 30px auto;
+  text-align: center;
 `;
 
 class HelloMelon extends React.Component {
@@ -114,6 +113,15 @@ class HelloMelon extends React.Component {
   }
   render(){
     const { index, direction } = this.state;
+    const purple = '#5E366A';
+    const white = '#FFF';
+    const green="#60B5A9";
+    const Links = {
+        liveSite: 'https://nutrition-tracker-lambda.netlify.com/',
+        FEGithub: 'https://github.com/labspt3-nutrition-tracker/nutrition-tracker-FE',
+        BEGithub: 'https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE'
+      }
+
     return(
       <HelloMelonContainer>
         <h1> HelloMelon </h1>
@@ -124,7 +132,14 @@ class HelloMelon extends React.Component {
         </CarouselContainer>
         <ProjectLinks />
         <TechInfo>
-          <h2> The following Tech was used with this project </h2>
+          <h2> A nutrition tracking app for logging macros with a coach feature for accountability. </h2>
+          <ProjectLinks
+            liveSite={Links.liveSite}
+            FEGithub={Links.FEGithub}
+            BEGithub={Links.BEGithub}
+            background = {purple}
+            hoverColor={green}
+            font= {white}/>
         </TechInfo>
       </HelloMelonContainer>
     )
