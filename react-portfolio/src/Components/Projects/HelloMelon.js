@@ -174,7 +174,24 @@ class HelloMelon extends React.Component {
         <TechStackContainer>
           <h2> HelloMelon Tech Stack </h2>
           <TechStack>
-            <h3> Front End: </h3>
+            <div>
+            <h3> Frontend: </h3>
+            { this.state.frontEndStack.map(item => {
+              return <p> { item }</p>
+            })}
+            </div>
+            <div>
+              <h3> Backend: </h3>
+              { this.state.backEndStack.map(item => {
+                return <p> { item }</p>
+              })}
+            </div>
+            <div>
+              <h3> 3rd Party APIs and Libraries </h3>
+              { this.state.APIs.map(item => {
+                return <p> { item }</p>
+              })}
+            </div>
           </TechStack>
 
         </TechStackContainer>
