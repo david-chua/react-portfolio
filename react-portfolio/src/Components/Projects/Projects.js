@@ -58,6 +58,10 @@ class Projects extends React.Component {
     })
   }
 
+  componentWillUnmount(){
+    this.chooseProject();
+  }
+
   render(){
     return(
       <div>

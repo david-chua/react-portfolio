@@ -72,24 +72,14 @@ class HelloMelon extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.startCarousel);
+    clearInterval(this.carouselInterval);
   }
 
   startCarousel = () => {
     this.carouselInterval = setInterval(() => {
-      this.moveCarousel();
+      this.rightClick();
     },4000)
   }
-
-  moveCarousel = () => {
-    if (this.state.selectedCarouselIndex === (this.state.carousel.length -1)){
-      this.setState({selectedCarouselIndex: 0})
-    } else {
-      this.setState({
-        selectedCarouselIndex: this.state.selectedCarouselIndex + 1
-      })
-    }
-  }
-
 
   leftClick = () => {
     if (this.state.selectedCarouselIndex === 0 ){
@@ -113,7 +103,7 @@ class HelloMelon extends React.Component {
     return <HelloHome className="carousel" src={this.state.carousel[this.state.selectedCarouselIndex]} alt="project image"/>
   }
   render(){
-    const { index, direction } = this.state;
+
     return(
       <HelloMelonContainer>
         <h1> HelloMelon </h1>

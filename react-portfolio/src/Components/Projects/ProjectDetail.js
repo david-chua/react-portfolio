@@ -11,11 +11,10 @@ class ProjectDetails extends React.Component{
 
   render(){
     const { id } = this.props.chosenProject
-    console.log(this.props.chosenProject.id)
     return(
       <div>
     {/*  {id === 3 && <TrainingForGains />} */}
-    <HelloMelon />
+        { id === 1 && <HelloMelon />}
       </div>
     )
   }
