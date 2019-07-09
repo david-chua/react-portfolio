@@ -45,7 +45,7 @@ const NavLinkContainer = styled.div`
 
 
   @media( max-width: 1000px){
-    padding: 20px 0px;
+    padding: 0px 0px;
   }
 
 `;
