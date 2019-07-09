@@ -60,6 +60,38 @@ const TechInfo = styled.div`
   width: 90%;
   margin: 30px auto;
   text-align: center;
+  font-size: 1.4em;
+  font-family: "Gill Sans MT";
+`;
+
+const TechStackContainer = styled.div`
+  padding: 30px;
+  width: 100%;
+  height: 500px;
+  border: 1px solid blue;
+
+ h2 {
+   text-align: center
+   font-size: 2.5em;
+   margin-left: 50px;
+   font-family: "Gill Sans MT";
+   color: #60B5A9;
+ }
+`;
+
+const TechStack = styled.div`
+  width: 70%;
+  height: 400px;
+  margin: 0 auto;
+  padding: 30px 0;
+  border: 1px solid pink;
+
+  h3 {
+    margin-left: 80px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
 `;
 
 class HelloMelon extends React.Component {
@@ -68,7 +100,10 @@ class HelloMelon extends React.Component {
 
     this.state={
       carousel: [homePage, coachPage, calendarPage],
-      selectedCarouselIndex: 0
+      selectedCarouselIndex: 0,
+      frontEndStack: ['React', 'Apollo Client', 'GraphQL', 'MaterialUI', 'Styled Components'],
+      backEndStack: ['PostgreSQL', 'GraphQL', 'SQLite3', 'Knex'],
+      APIs: ['Google Auth', 'Stripe API', 'Edamam API']
     }
   }
 
@@ -136,6 +171,13 @@ class HelloMelon extends React.Component {
             background = {purple}
             hoverColor={green}/>
         </TechInfo>
+        <TechStackContainer>
+          <h2> HelloMelon Tech Stack </h2>
+          <TechStack>
+            <h3> Front End: </h3>
+          </TechStack>
+
+        </TechStackContainer>
       </HelloMelonContainer>
     )
   }

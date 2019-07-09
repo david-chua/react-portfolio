@@ -85,6 +85,7 @@ const LinkDiv = styled.div`
   width: 100%;
   padding: 40px 0 40px 0;
   font-size: 5em;
+  color: #063A7C;
 
   &:hover{
     background: #063A7C;
