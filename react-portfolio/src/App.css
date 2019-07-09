@@ -99,3 +99,7 @@ table {
 		font-size: 1.7em;
 	}
 }
+
+.link_title{
+	text-decoration:none;
+}

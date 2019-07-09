@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import homePage from './../../Assets/Images/HelloMelon/home.png';
 import coachPage from './../../Assets/Images/HelloMelon/coach.png';
 import calendarPage from './../../Assets/Images/HelloMelon/calendar.png';
+import logo from './../../Assets/Images/logo-green.png';
 
 import ProjectLinks from './ProjectLinks';
 
@@ -32,6 +33,12 @@ const CarouselContainer = styled.div`
   position: relative;
   overflow: hidden;
   margin-top: 16px;
+`;
+
+const LogoImage = styled.img`
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 `;
 
 const HelloHome = styled.img`
@@ -71,7 +78,7 @@ class HelloMelon extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.startCarousel);
-    clearInterval(this.carouselInterval);
+
   }
 
   startCarousel = () => {
@@ -112,7 +119,8 @@ class HelloMelon extends React.Component {
 
     return(
       <HelloMelonContainer>
-        <h1> HelloMelon </h1>
+        <a className="link_title" href={Links.liveSite}><LogoImage src={logo}></LogoImage
+></a>
         <CarouselContainer>
           <div className="left-button" onClick={this.leftClick}>{"<"}</div>
           {this.selectedImage()}
