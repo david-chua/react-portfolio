@@ -125,10 +125,21 @@ const Tech = styled.div`
   p{
     font-size: 1.3em;
   }
+`;
 
+const AccomplishmentContainer = styled.div`
+  padding-top: 50px;
 
-  `;
+`;
 
+const Accomplishmenth2 = styled.h2`
+  text-align: center
+  font-size: 2.5em;
+  margin-left: 50px;
+  font-weight: bold;
+  font-family: "Gill Sans MT";
+  color: "#60B5A9";
+`;
 
 class HelloMelon extends React.Component {
   constructor(props) {
@@ -232,8 +243,11 @@ class HelloMelon extends React.Component {
               })}
             </Tech>
           </TechStack>
-
         </TechStackContainer>
+
+        <AccomplishmentContainer>
+          <Accomplishmenth2> Accomplishment </Accomplishmenth2>
+        </AccomplishmentContainer>
       </HelloMelonContainer>
     )
   }
