@@ -4,6 +4,7 @@ import homePage from './../../Assets/Images/HelloMelon/home.png';
 import coachPage from './../../Assets/Images/HelloMelon/coach.png';
 import calendarPage from './../../Assets/Images/HelloMelon/calendar.png';
 import logo from './../../Assets/Images/logo-green.png';
+import spread from './../../Assets/Images/HelloMelon/spread.png';
 
 import ProjectLinks from './ProjectLinks';
 
@@ -66,33 +67,68 @@ const TechInfo = styled.div`
 
 const TechStackContainer = styled.div`
   padding: 30px;
-  width: 100%;
-  height: 500px;
-  border: 1px solid blue;
-
- h2 {
-   text-align: center
-   font-size: 2.5em;
-   margin-left: 50px;
-   font-family: "Gill Sans MT";
-   color: #60B5A9;
- }
-`;
-
-const TechStack = styled.div`
   width: 70%;
-  height: 400px;
+  height: 300px;
   margin: 0 auto;
-  padding: 30px 0;
-  border: 1px solid pink;
+  background-image: url(${spread});
 
-  h3 {
-    margin-left: 80px;
-    font-size: 1.2em;
-    font-weight: bold;
+  @media (max-width: 800px){
+    height: 550px;
   }
 
 `;
+const HelloTitle = styled.div`
+  display: block;
+  @media (max-width: 800px){
+    height: 150px;
+  }
+
+  h2 {
+    text-align: center
+    font-size: 2.5em;
+    margin-left: 50px;
+    font-weight: bold;
+    font-family: "Gill Sans MT";
+    color: '#5E366A';
+  }
+`;
+
+
+const TechStack = styled.div`
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
+`;
+
+const Tech = styled.div`
+  width: 30%;
+  text-align: center;
+
+  @media (max-width: 1000px){
+    width: 100%;
+  }
+
+  h3{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: '#5E366A';
+  }
+
+  p{
+    font-size: 1.3em;
+  }
+
+
+  `;
+
 
 class HelloMelon extends React.Component {
   constructor(props) {
@@ -103,7 +139,7 @@ class HelloMelon extends React.Component {
       selectedCarouselIndex: 0,
       frontEndStack: ['React', 'Apollo Client', 'GraphQL', 'MaterialUI', 'Styled Components'],
       backEndStack: ['PostgreSQL', 'GraphQL', 'SQLite3', 'Knex'],
-      APIs: ['Google Auth', 'Stripe API', 'Edamam API']
+      APIs: ['Google Auth API', 'Stripe API', 'Edamam API']
     }
   }
 
@@ -171,27 +207,30 @@ class HelloMelon extends React.Component {
             background = {purple}
             hoverColor={green}/>
         </TechInfo>
+
         <TechStackContainer>
-          <h2> HelloMelon Tech Stack </h2>
+          <HelloTitle>
+            <h2> HelloMelon Tech Stack </h2>
+          </HelloTitle>
           <TechStack>
-            <div>
-            <h3> Frontend: </h3>
+            <Tech>
+            <h3 className="h3_padding"> Frontend: </h3>
             { this.state.frontEndStack.map(item => {
               return <p> { item }</p>
             })}
-            </div>
-            <div>
-              <h3> Backend: </h3>
+            </Tech>
+            <Tech>
+              <h3 className="h3_padding"> Backend: </h3>
               { this.state.backEndStack.map(item => {
                 return <p> { item }</p>
               })}
-            </div>
-            <div>
-              <h3> 3rd Party APIs and Libraries </h3>
+            </Tech>
+            <Tech>
+              <h3 className="h3_padding"> 3rd Party APIs</h3>
               { this.state.APIs.map(item => {
                 return <p> { item }</p>
               })}
-            </div>
+            </Tech>
           </TechStack>
 
         </TechStackContainer>

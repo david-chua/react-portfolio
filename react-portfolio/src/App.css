@@ -103,3 +103,7 @@ table {
 .link_title{
 	text-decoration:none;
 }
+
+.h3_padding{
+	padding: 20px;
+}
