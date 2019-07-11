@@ -66,7 +66,7 @@ const TechInfo = styled.div`
 `;
 
 const TechStackContainer = styled.div`
-  padding: 30px;
+  padding: 30px 0px;
   width: 70%;
   height: 300px;
   margin: 0 auto;
@@ -86,7 +86,6 @@ const HelloTitle = styled.div`
   h2 {
     text-align: center
     font-size: 2.5em;
-    margin-left: 50px;
     font-weight: bold;
     font-family: "Gill Sans MT";
     color: '#5E366A';
@@ -119,26 +118,33 @@ const Tech = styled.div`
   h3{
     font-size: 1.3em;
     font-weight: bold;
-    color: '#5E366A';
   }
 
   p{
     font-size: 1.3em;
+    line-height: 1.3em;
   }
 `;
 
 const AccomplishmentContainer = styled.div`
   padding-top: 50px;
+  width: 70%;
+  margin: 0 auto;
 
 `;
 
 const Accomplishmenth2 = styled.h2`
   text-align: center
   font-size: 2.5em;
-  margin-left: 50px;
   font-weight: bold;
   font-family: "Gill Sans MT";
-  color: "#60B5A9";
+  color: '#60B5A9';
+
+`;
+
+const AccomplishmentInfo = styled.div`
+  text-align: center;
+  margin: 20px auto 50px;
 `;
 
 class HelloMelon extends React.Component {
@@ -150,7 +156,13 @@ class HelloMelon extends React.Component {
       selectedCarouselIndex: 0,
       frontEndStack: ['React', 'Apollo Client', 'GraphQL', 'MaterialUI', 'Styled Components'],
       backEndStack: ['PostgreSQL', 'GraphQL', 'SQLite3', 'Knex'],
-      APIs: ['Google Auth API', 'Stripe API', 'Edamam API']
+      APIs: ['Google Auth API', 'Stripe API', 'Edamam API'],
+      accomplishments: [
+        'Learned and Implemented GraphQL and SQLite3 backend in 4 days',
+        'Implemented GraphQL in the frontend using GraphQL-Apollo',
+        'Implemented full-calendar API, and connected Edamam food database API for search functionality in the frontend',
+        'Created coach-trainee functionality for allowing coach to view trainee data'
+      ]
     }
   }
 
@@ -221,7 +233,7 @@ class HelloMelon extends React.Component {
 
         <TechStackContainer>
           <HelloTitle>
-            <h2> HelloMelon Tech Stack </h2>
+            <h2 className="helloTitleh2"> HelloMelon Tech Stack </h2>
           </HelloTitle>
           <TechStack>
             <Tech>
@@ -246,7 +258,16 @@ class HelloMelon extends React.Component {
         </TechStackContainer>
 
         <AccomplishmentContainer>
-          <Accomplishmenth2> Accomplishment </Accomplishmenth2>
+          <Accomplishmenth2 className="accomplishmenth2"> Accomplishment </Accomplishmenth2>
+            <AccomplishmentInfo>
+              { this.state.accomplishments.map(accomplishment => {
+                return(
+                  <p>
+                    {accomplishment}
+                  </p>
+                )
+              })}
+            </AccomplishmentInfo>
         </AccomplishmentContainer>
       </HelloMelonContainer>
     )
