@@ -139,12 +139,19 @@ const Accomplishmenth2 = styled.h2`
   font-weight: bold;
   font-family: "Gill Sans MT";
   color: '#60B5A9';
+  text-decoration: underline;
 
 `;
 
 const AccomplishmentInfo = styled.div`
   text-align: center;
   margin: 20px auto 50px;
+
+  p{
+    font-size: 1em;
+    line-height: 2em;
+
+  }
 `;
 
 class HelloMelon extends React.Component {
@@ -160,7 +167,8 @@ class HelloMelon extends React.Component {
       accomplishments: [
         'Learned and Implemented GraphQL and SQLite3 backend in 4 days',
         'Implemented GraphQL in the frontend using GraphQL-Apollo',
-        'Implemented full-calendar API, and connected Edamam food database API for search functionality in the frontend',
+        'Implemented full-calendar API for journal feature',
+        'Connected Edamam food database API for search functionality in the frontend',
         'Created coach-trainee functionality for allowing coach to view trainee data'
       ]
     }
@@ -262,7 +270,7 @@ class HelloMelon extends React.Component {
             <AccomplishmentInfo>
               { this.state.accomplishments.map(accomplishment => {
                 return(
-                  <p>
+                  <p className="accomplishmentp">
                     {accomplishment}
                   </p>
                 )
