@@ -6,12 +6,18 @@ import ProjectDetails from './ProjectDetail';
 import trainingForGains from './../../Assets/Images/Mac/trainingforgains_mac.png';
 import cooking from './../../Assets/Images/Mac/cooking_user_mac.png';
 import helloMelon from './../../Assets/Images/Mac/hellomelon_mac.png';
+import bookr from './../../Assets/Images/Mac/bookrMac.png';
 
 const ProjectData = [
   {
     id: 1,
     img: helloMelon,
     title: 'Hello Melon'
+  },
+  {
+    id: 2,
+    img: bookr,
+    title: 'Bookr'
   },
   {
     id: 3,
