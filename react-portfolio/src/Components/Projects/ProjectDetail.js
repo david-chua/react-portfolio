@@ -13,9 +13,9 @@ class ProjectDetails extends React.Component{
     const { id } = this.props.chosenProject
     return(
       <div>
-    {/*  {id === 3 && <TrainingForGains />} */}
-        // { id === 1 && <HelloMelon />}
-        <HelloMelon />
+        { id === 1 && <HelloMelon />}
+        {id === 3 && <TrainingForGains />}
+
       </div>
     )
   }

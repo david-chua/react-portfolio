@@ -99,3 +99,20 @@ table {
 		font-size: 1.7em;
 	}
 }
+
+.link_title{
+	text-decoration:none;
+}
+
+.h3_padding{
+	padding: 20px;
+}
+
+.accomplishmenth2{
+	color: #60B5A9;
+}
+
+.helloTitleh2{
+	color: #5E366A;
+	text-align: center;
+}

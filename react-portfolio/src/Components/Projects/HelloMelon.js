@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import homePage from './../../Assets/Images/HelloMelon/home.png';
 import coachPage from './../../Assets/Images/HelloMelon/coach.png';
 import calendarPage from './../../Assets/Images/HelloMelon/calendar.png';
+import logo from './../../Assets/Images/logo-green.png';
+import spread from './../../Assets/Images/HelloMelon/spread.png';
 
 import ProjectLinks from './ProjectLinks';
 
@@ -34,6 +36,12 @@ const CarouselContainer = styled.div`
   margin-top: 16px;
 `;
 
+const LogoImage = styled.img`
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+`;
+
 const HelloHome = styled.img`
   width: 70vw;
   height: 80vh;
@@ -53,6 +61,97 @@ const TechInfo = styled.div`
   width: 90%;
   margin: 30px auto;
   text-align: center;
+  font-size: 1.4em;
+  font-family: "Gill Sans MT";
+`;
+
+const TechStackContainer = styled.div`
+  padding: 30px 0px;
+  width: 70%;
+  height: 300px;
+  margin: 0 auto;
+  background-image: url(${spread});
+
+  @media (max-width: 800px){
+    height: 550px;
+  }
+
+`;
+const HelloTitle = styled.div`
+  display: block;
+  @media (max-width: 800px){
+    height: 150px;
+  }
+
+  h2 {
+    text-align: center
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Gill Sans MT";
+    color: '#5E366A';
+  }
+`;
+
+
+const TechStack = styled.div`
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
+`;
+
+const Tech = styled.div`
+  width: 30%;
+  text-align: center;
+
+  @media (max-width: 1000px){
+    width: 100%;
+  }
+
+  h3{
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  p{
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+`;
+
+const AccomplishmentContainer = styled.div`
+  padding-top: 50px;
+  width: 70%;
+  margin: 0 auto;
+
+`;
+
+const Accomplishmenth2 = styled.h2`
+  text-align: center
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: "Gill Sans MT";
+  color: '#60B5A9';
+  text-decoration: underline;
+
+`;
+
+const AccomplishmentInfo = styled.div`
+  text-align: center;
+  margin: 20px auto 50px;
+
+  p{
+    font-size: 1em;
+    line-height: 2em;
+
+  }
 `;
 
 class HelloMelon extends React.Component {
@@ -61,7 +160,17 @@ class HelloMelon extends React.Component {
 
     this.state={
       carousel: [homePage, coachPage, calendarPage],
-      selectedCarouselIndex: 0
+      selectedCarouselIndex: 0,
+      frontEndStack: ['React', 'Apollo Client', 'GraphQL', 'MaterialUI', 'Styled Components'],
+      backEndStack: ['PostgreSQL', 'GraphQL', 'SQLite3', 'Knex'],
+      APIs: ['Google Auth API', 'Stripe API', 'Edamam API'],
+      accomplishments: [
+        'Learned and Implemented GraphQL and SQLite3 backend in 4 days',
+        'Implemented GraphQL in the frontend using GraphQL-Apollo',
+        'Implemented full-calendar API for journal feature',
+        'Connected Edamam food database API for search functionality in the frontend',
+        'Created coach-trainee functionality for allowing coach to view trainee data'
+      ]
     }
   }
 
@@ -71,7 +180,7 @@ class HelloMelon extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.startCarousel);
-    clearInterval(this.carouselInterval);
+
   }
 
   startCarousel = () => {
@@ -112,7 +221,8 @@ class HelloMelon extends React.Component {
 
     return(
       <HelloMelonContainer>
-        <h1> HelloMelon </h1>
+        <a className="link_title" href={Links.liveSite}><LogoImage src={logo}></LogoImage
+></a>
         <CarouselContainer>
           <div className="left-button" onClick={this.leftClick}>{"<"}</div>
           {this.selectedImage()}
@@ -128,6 +238,45 @@ class HelloMelon extends React.Component {
             background = {purple}
             hoverColor={green}/>
         </TechInfo>
+
+        <TechStackContainer>
+          <HelloTitle>
+            <h2 className="helloTitleh2"> HelloMelon Tech Stack </h2>
+          </HelloTitle>
+          <TechStack>
+            <Tech>
+            <h3 className="h3_padding"> Frontend: </h3>
+            { this.state.frontEndStack.map(item => {
+              return <p> { item }</p>
+            })}
+            </Tech>
+            <Tech>
+              <h3 className="h3_padding"> Backend: </h3>
+              { this.state.backEndStack.map(item => {
+                return <p> { item }</p>
+              })}
+            </Tech>
+            <Tech>
+              <h3 className="h3_padding"> 3rd Party APIs</h3>
+              { this.state.APIs.map(item => {
+                return <p> { item }</p>
+              })}
+            </Tech>
+          </TechStack>
+        </TechStackContainer>
+
+        <AccomplishmentContainer>
+          <Accomplishmenth2 className="accomplishmenth2"> Accomplishment </Accomplishmenth2>
+            <AccomplishmentInfo>
+              { this.state.accomplishments.map(accomplishment => {
+                return(
+                  <p className="accomplishmentp">
+                    {accomplishment}
+                  </p>
+                )
+              })}
+            </AccomplishmentInfo>
+        </AccomplishmentContainer>
       </HelloMelonContainer>
     )
   }
