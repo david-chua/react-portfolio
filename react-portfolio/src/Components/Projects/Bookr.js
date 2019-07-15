@@ -6,20 +6,14 @@ import info from './../../Assets/Images/Bookr/book_info.png';
 import review from './../../Assets/Images/Bookr/review.png';
 import edit from './../../Assets/Images/Bookr/edit.png';
 
+import ProjectLinks from './ProjectLinks';
+
 const BookrContainer = styled.div`
   width: 100%;
   height: 100vh;
   padding-top: 20px;
 
 `;
-
-const ImagesContainer = styled.div`
-  width: 80%;
-  margin: 30px auto;
-  display: flex;
-`;
-
-
 
 const LogoImage = styled.img`
   margin: 0 auto;
@@ -29,8 +23,10 @@ const LogoImage = styled.img`
 
 
 const HomeContainer = styled.div`
-  width: 100%;
-
+  width: 80%;
+  height: 70vh;
+  margin: 30px auto;
+  display: flex;
 `;
 
 const Home = styled.img`
@@ -47,13 +43,23 @@ const TechInfo = styled.div`
   font-size: 1.4em;
   font-family: "Gill Sans MT";
 `;
-//
-// <HomeContainer>
-//   <Home src={homePage} alt="home" />
-// </HomeContainer>
-// <EditContainer>
-//   <Edit src={edit} alt="edit page" />
-// </EditContainer>
+
+const Views = styled.div`
+  margin: 20px auto;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+`;
+
+const ViewButton = styled.button`
+  padding: 10px 15px;
+  color: #FFF;
+  width: 150px;
+  font-size: .8em;
+  background: #0741AD;
+  font-family: "Gill Sans MT";
+  cursor: pointer;
+`;
 
 class Bookr extends React.Component{
   constructor(props){
@@ -68,22 +74,51 @@ class Bookr extends React.Component{
         'implemented front end React portion in less than 24 hours of work time',
         'Communicated with backend developer in order to get the data needed from backend REST API calls',
         'Added some mobile responsiveness to a majority of the front end application'
-      ]
+      ],
+      displayImage: homePage
     }
   }
 
+  setImage = image  => {
+    this.setState({
+      displayImage: image
+    })
+  }
   render(){
+    const blue = '#0741AD';
+    const red = '#D82B21';
+    const Links = {
+        liveSite: 'https://bookr-book-review.netlify.com/',
+        FEGithub: 'https://github.com/david-chua/Bookr-Front-End',
+        BEGithub: 'https://github.com/david-chua/Bookr-Back-End'
+      }
     return (
       <BookrContainer>
         <a className="link_title"><LogoImage src={logo}></LogoImage></a>
-        <ImagesContainer>
-          <HomeContainer>
-            <Home src={homePage} alt="home" />
-          </HomeContainer>
-        </ImagesContainer>
+        <HomeContainer>
+          <Home src={this.state.displayImage} alt="home" />
+        </HomeContainer>
         <TechInfo>
-          <h2> A book review app designed to show books you've rated and how others are rating the same book. </h2>
+          <h3> See other project views </h3>
+          <Views>
+            <ViewButton onClick={() => this.setImage(homePage)}> Home </ViewButton>
+            <ViewButton onClick={() => this.setImage(info)} > Book Info </ViewButton>
+            <ViewButton onClick={() => this.setImage(review)}> Review </ViewButton>
+            <ViewButton onClick={() => this.setImage(edit)}> Edit </ViewButton>
+          </Views>
         </TechInfo>
+        <TechInfo>
+          <h2> A book review app designed to show books you've rated and show how others are rating the same book. </h2>
+          <ProjectLinks
+            liveSite={Links.liveSite}
+            FEGithub={Links.FEGithub}
+            BEGithub={Links.BEGithub}
+            background={blue}
+            hoverColor={red}
+          />
+        </TechInfo>
+
+
       </BookrContainer>
     )
   }
