@@ -11,16 +11,49 @@ const BookrContainer = styled.div`
   height: 100vh;
   padding-top: 20px;
 
-  h1 {
-    color: '#4CAF50';
-  }
 `;
+
+const ImagesContainer = styled.div`
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+`;
+
+
 
 const LogoImage = styled.img`
   margin: 0 auto;
   display: block;
   text-align: center;
 `;
+
+
+const HomeContainer = styled.div`
+  width: 100%;
+
+`;
+
+const Home = styled.img`
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid black;
+`;
+
+const TechInfo = styled.div`
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: "Gill Sans MT";
+`;
+//
+// <HomeContainer>
+//   <Home src={homePage} alt="home" />
+// </HomeContainer>
+// <EditContainer>
+//   <Edit src={edit} alt="edit page" />
+// </EditContainer>
 
 class Bookr extends React.Component{
   constructor(props){
@@ -42,7 +75,15 @@ class Bookr extends React.Component{
   render(){
     return (
       <BookrContainer>
-      <a className="link_title"><LogoImage src={logo}></LogoImage></a>
+        <a className="link_title"><LogoImage src={logo}></LogoImage></a>
+        <ImagesContainer>
+          <HomeContainer>
+            <Home src={homePage} alt="home" />
+          </HomeContainer>
+        </ImagesContainer>
+        <TechInfo>
+          <h2> A book review app designed to show books you've rated and how others are rating the same book. </h2>
+        </TechInfo>
       </BookrContainer>
     )
   }
