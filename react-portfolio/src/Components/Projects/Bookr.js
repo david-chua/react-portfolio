@@ -56,7 +56,7 @@ const ViewButton = styled.button`
   color: #FFF;
   width: 150px;
   font-size: .8em;
-  background: #0741AD;
+  background: #449DD1;
   font-family: "Gill Sans MT";
   cursor: pointer;
 `;
@@ -86,6 +86,7 @@ class Bookr extends React.Component{
   }
   render(){
     const blue = '#0741AD';
+    const lightblue='#A3D9FF';
     const red = '#D82B21';
     const Links = {
         liveSite: 'https://bookr-book-review.netlify.com/',
