@@ -6,7 +6,6 @@ const ProjectLinksContainer = styled.div`
   display: flex;
   margin: 30px auto;
   justify-content: center;
-
   @media(max-width: 800px){
     align-self; center;
     flex-direction: column;
@@ -17,9 +16,10 @@ const ProjectButton = styled.button`
   margin: 0 30px;
   padding: 5px 15px;
   border-radius: 15px;
-  width: 150px;
+  width: 200px;
   text-align: center;
   color: #FFF;
+  font-size: 1.2em;
   background: ${props => props.background ? props.background : 'FFFFFF'};
 
   &:hover {

@@ -14,7 +14,8 @@ class ProjectDetails extends React.Component{
     return(
       <div>
     {/*  {id === 3 && <TrainingForGains />} */}
-        { id === 1 && <HelloMelon />}
+        // { id === 1 && <HelloMelon />}
+        <HelloMelon />
       </div>
     )
   }
