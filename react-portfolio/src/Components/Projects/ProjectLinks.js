@@ -19,7 +19,7 @@ const ProjectButton = styled.button`
   width: 200px;
   text-align: center;
   color: #FFF;
-  font-size: 1.2em;
+  font-size: .7em;
   background: ${props => props.background ? props.background : 'FFFFFF'};
 
   &:hover {
