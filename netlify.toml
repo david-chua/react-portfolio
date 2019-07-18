@@ -1,6 +1,6 @@
 [build]
 base="react-portfolio/"
-publish="raect-portfolio/build"
+publish="react-portfolio/build"
 command="yarn build"
 
 [[redirects]]
