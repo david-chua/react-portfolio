@@ -23,7 +23,7 @@ class TrainingForGains extends React.Component {
       APIs: ['Web Storage api', 'Google Books API'],
       accomplishments: [
         'Implemented Google Books API for search functionality in the front end',
-        'implemented current front end React portion in less than 24 hours of work time',
+        'Implemented current front end React portion in less than 24 hours of work time',
         'Communicated with backend developer in order to get the data needed from backend REST API calls',
         'Added mobile and tablet responsiveness to a majority of the front end application'
       ]

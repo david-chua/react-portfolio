@@ -25,17 +25,31 @@ const LogoImage = styled.img`
 
 
 const HomeContainer = styled.div`
-  width: 80%;
-  height: 70vh;
-  margin: 30px auto;
-  display: flex;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+position: relative;
+overflow: hidden;
+margin-top: 16px;
 `;
 
 const Home = styled.img`
-  margin: 0 auto;
-  display: block;
   text-align: center;
   border: 1px solid black;
+  width: 70vw;
+  height: 80vh;
+  margin: 0 auto;
+  text-align: center;
+
+  @media(max-width: 1300px){
+    height: 60vh;
+  }
+
+  @media(max-width: 1000px){
+    height: 40vh;
+  }
 `;
 
 const TechInfo = styled.div`
@@ -44,6 +58,10 @@ const TechInfo = styled.div`
   text-align: center;
   font-size: 1.4em;
   font-family: "Gill Sans MT";
+
+  @media (max-width: 900px){
+    margin: 0px auto;
+  }
 `;
 
 const Views = styled.div`
@@ -53,7 +71,12 @@ const Views = styled.div`
   justify-content: space-between;
   align-items: center;
   color: #449DD1;
+  flex-wrap: wrap;
+  text-align: center;
 
+  @media (max-width: 1100px){
+    justify-content: center;
+  }
 `;
 
 const ViewButton = styled.button`
@@ -64,6 +87,10 @@ const ViewButton = styled.button`
   background: #449DD1;
   font-family: "Gill Sans MT";
   cursor: pointer;
+
+  @media(max-width: 1100px){
+    width: 90%;
+  }
 `;
 
   // background-image: url(${spread});
@@ -72,13 +99,20 @@ const TechStackContainer = styled.div`
   align-items: center;
   padding: 30px 0px;
   width: 70%;
-  height: 300px;
-  margin: 60px auto;
+  height: 400px;
+  margin: 30px auto;
   background-image: url(${spread});
 
+  @media(max-width:1000px){
+    height: 400px;
+  }
 
-  @media (max-width: 800px){
-    height: 550px;
+  @media (max-width: 900px){
+    height: 700px;
+  }
+
+  @media(max-width: 700px){
+    height: 800px;
   }
 
 `;
@@ -86,9 +120,9 @@ const TechStackContainer = styled.div`
 const TechStackPanel = styled.div`
   border: 2px solid black;
   width: 80%;
+  height: 300px;
   margin: 0 auto;
   z-index: 1;
-  border: 1px solid white;
   position: relative;
   color: white;
   background: inherit;
@@ -104,6 +138,14 @@ const TechStackPanel = styled.div`
     box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3);
     filter: blur(10px);
   }
+
+  @media(max-width: 900px){
+    height: 600px;
+  }
+
+  @media(max-widtth:700px){
+    height: 1000px;
+  }
 `;
 
 const TechStack = styled.div`
@@ -116,9 +158,25 @@ const TechStack = styled.div`
   color: #FCFCFB;
   font-weight: bold;
 
+  @media (max-width: 900px){
+    flex-direction: column;
+    height: 500px;
+  }
+
   @media (max-width: 800px){
     flex-direction: column;
+    height: 400px;
   }
+
+  @media (max-width: 700px){
+    height: 300px;
+  }
+
+  @media (max-width: 600px){
+    heigh: 600px;
+    margin-top: 30px;
+  }
+
 `;
 
 const Tech = styled.div`
@@ -236,7 +294,6 @@ class Bookr extends React.Component{
       <BookrContainer>
         <a className="link_title"><LogoImage src={logo}></LogoImage></a>
         <TechInfo>
-
           <Views>
             <h3> See other project views: </h3>
             <ViewButton onClick={() => this.setImage(homePage)}> Home </ViewButton>
@@ -245,6 +302,7 @@ class Bookr extends React.Component{
             <ViewButton onClick={() => this.setImage(edit)}> Edit </ViewButton>
           </Views>
         </TechInfo>
+
         <HomeContainer>
           <Home src={this.state.displayImage} alt="home" />
 
