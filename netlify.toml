@@ -1,6 +1,6 @@
 [build]
-base="bookr/"
-publish="bookr/build"
+base="react-portfolio/"
+publish="raect-portfolio/build"
 command="yarn build"
 
 [[redirects]]
