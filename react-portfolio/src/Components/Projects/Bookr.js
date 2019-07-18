@@ -108,7 +108,7 @@ const TechStackPanel = styled.div`
 
 const TechStack = styled.div`
   width: 70%;
-  height: 200px;
+  height: 220px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -130,13 +130,24 @@ const Tech = styled.div`
   }
 
   h3{
-    font-size: 1.3em;
+    font-size: 1.7em;
     font-weight: bold;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
 
   p{
     font-size: 1.3em;
     line-height: 1.3em;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+
   }
 `;
 
@@ -152,6 +163,39 @@ const BookrTitle = styled.div`
     font-weight: bold;
     font-family: "Gill Sans MT";
     color: '#5E366A';
+    text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  }
+`;
+
+const AccomplishmentContainer = styled.div`
+  padding-top: 50px;
+  width: 70%;
+  margin: 0 auto;
+
+`;
+
+const Accomplishmenth2 = styled.h2`
+  text-align: center
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: "Gill Sans MT";
+  color: '#0741AD';
+  text-decoration: underline;
+
+`;
+
+const AccomplishmentInfo = styled.div`
+  text-align: center;
+  margin: 20px auto 50px;
+
+  p{
+    font-size: 1em;
+    line-height: 2em;
+
   }
 `;
 
@@ -161,13 +205,13 @@ class Bookr extends React.Component{
 
     this.state={
       frontEndStack: ['React', 'Styled Components', 'React Router'],
-      backEndStack: ['Knex', 'Bcrypt', 'Jsonwebtoken', 'SQLite3', 'postgreSQL'],
-      APIs: ['web storage api', 'Google Books API'],
+      backEndStack: ['Knex', 'Bcrypt', 'Jsonwebtoken', 'SQLite3', 'PostgreSQL'],
+      APIs: ['Web Storage api', 'Google Books API'],
       accomplishments: [
         'Implemented Google Books API for search functionality in the front end',
-        'implemented front end React portion in less than 24 hours of work time',
+        'implemented current front end React portion in less than 24 hours of work time',
         'Communicated with backend developer in order to get the data needed from backend REST API calls',
-        'Added some mobile responsiveness to a majority of the front end application'
+        'Added mobile and tablet responsiveness to a majority of the front end application'
       ],
       displayImage: homePage
     }
@@ -244,6 +288,19 @@ class Bookr extends React.Component{
           </TechStack>
           </TechStackPanel>
         </TechStackContainer>
+
+        <AccomplishmentContainer>
+          <Accomplishmenth2 className="bookraccomplishmenth2"> Accomplishment </Accomplishmenth2>
+            <AccomplishmentInfo>
+              { this.state.accomplishments.map(accomplishment => {
+                return(
+                  <p className="accomplishmentp">
+                    {accomplishment}
+                  </p>
+                )
+              })}
+            </AccomplishmentInfo>
+        </AccomplishmentContainer>
 
 
       </BookrContainer>

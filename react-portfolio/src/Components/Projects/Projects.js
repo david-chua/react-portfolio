@@ -24,11 +24,11 @@ const ProjectData = [
     img: trainingForGains,
     title: 'Training For Gains'
   },
-  {
-    id: 4,
-    img: cooking,
-    title: "What's Cooking"
-  }
+  // {
+  //   id: 4,
+  //   img: cooking,
+  //   title: "What's Cooking"
+  // }
 
 ]
 
