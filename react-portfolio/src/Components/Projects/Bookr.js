@@ -262,13 +262,13 @@ class Bookr extends React.Component{
     super(props);
 
     this.state={
-      frontEndStack: ['React', 'Styled Components', 'React Router'],
-      backEndStack: ['Knex', 'Bcrypt', 'Jsonwebtoken', 'SQLite3', 'PostgreSQL'],
+      frontEndStack: ['React', 'Redux','SASS', 'React Router', 'Apollo Client', 'React-Bootstrap'],
+      backEndStack: ['Knex', 'Bcrypt', 'Jsonwebtoken', 'SQLite3', 'PostgreSQL', 'GraphQL'],
       APIs: ['Web Storage api', 'Google Books API'],
       accomplishments: [
         'Implemented Google Books API for search functionality in the front end',
-        'implemented current front end React portion in less than 24 hours of work time',
-        'Communicated with backend developer in order to get the data needed from backend REST API calls',
+        'Combined implementation of Jsonwebtoken and Google Oauth',
+        'Completed project in 8 weeks including design, data modeling, feature implementation',
         'Added mobile and tablet responsiveness to a majority of the front end application'
       ],
       displayImage: homePage
