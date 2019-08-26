@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from './../../Assets/Images/bookr_logo.png';
-import homePage from './../../Assets/Images/Bookr/home.png';
-import info from './../../Assets/Images/Bookr/book_info.png';
-import review from './../../Assets/Images/Bookr/review.png';
-import edit from './../../Assets/Images/Bookr/edit.png';
+import homePage from './../../Assets/Images/Bookr/bookr_home.png';
+import booksPage from './../../Assets/Images/Bookr/bookr_books.png';
+import news from './../../Assets/Images/Bookr/bookr_news.png';
+import bookView from './../../Assets/Images/Bookr/bookr_book_view.png';
 import spread from './../../Assets/Images/Bookr/books.jpg';
 
 
@@ -21,6 +21,10 @@ const LogoImage = styled.img`
   margin: 0 auto;
   display: block;
   text-align: center;
+
+  @media(max-width: 320px){
+    width: 90%;
+  }
 `;
 
 
@@ -40,7 +44,7 @@ const Home = styled.img`
   border: 1px solid black;
   width: 70vw;
   height: 80vh;
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: center;
 
   @media(max-width: 1300px){
@@ -49,6 +53,21 @@ const Home = styled.img`
 
   @media(max-width: 1000px){
     height: 40vh;
+  }
+`;
+
+const BookView = styled.img`
+  text-align: center;
+  width: 35vw;
+  min-width: 400px;
+  height: 80vh;
+  margin: 0 auto
+
+  @media(max-width: 414px)}
+  height: 500px;
+
+  @media (max-width: 320px){
+    min-width: 280px;
   }
 `;
 
@@ -111,8 +130,12 @@ const TechStackContainer = styled.div`
     height: 700px;
   }
 
-  @media(max-width: 700px){
-    height: 800px;
+  @media(max-width: 768px){
+    height: 850px;
+  }
+
+  @media(max-width: 450px){
+    height: 950px;
   }
 
 `;
@@ -143,8 +166,21 @@ const TechStackPanel = styled.div`
     height: 600px;
   }
 
-  @media(max-widtth:700px){
-    height: 1000px;
+  @media(max-width: 768px){
+    height: 675px;
+  }
+
+
+  @media(max-width: 500px){
+    height: 750px;
+  }
+
+  @media(max-width: 414px){
+    height: 800px;
+  }
+
+  @media(max-width: 320px){
+    height: 875px;
   }
 `;
 
@@ -211,6 +247,7 @@ const Tech = styled.div`
 
 const BookrTitle = styled.div`
   display: block;
+  margin-top: 20px;
   @media (max-width: 800px){
     height: 150px;
   }
@@ -227,6 +264,15 @@ const BookrTitle = styled.div`
   -1px 1px 0 #000,
   1px 1px 0 #000;
   }
+
+  @media(max-width: 500px){
+    height: 250px;
+  }
+
+  @media(max-width: 320px){
+    height: 300px;
+  }
+
 `;
 
 const AccomplishmentContainer = styled.div`
@@ -243,6 +289,14 @@ const Accomplishmenth2 = styled.h2`
   font-family: "Gill Sans MT";
   color: '#0741AD';
   text-decoration: underline;
+
+  @media(max-width: 768px){
+    font-size: 1.5em;
+  }
+
+  @media(max-width: 375px){
+    font-size: 1.8em;
+  }
 
 `;
 
@@ -271,14 +325,26 @@ class Bookr extends React.Component{
         'Completed project in 8 weeks including design, data modeling, feature implementation',
         'Added mobile and tablet responsiveness to a majority of the front end application'
       ],
-      displayImage: homePage
+      displayImage: homePage,
+      bookView: ""
     }
   }
 
-  setImage = image  => {
-    this.setState({
-      displayImage: image
-    })
+  setImage = (image, type)  => {
+      console.log(type, 'type')
+    if (type === "bookView"){
+      this.setState({
+        displayImage: image,
+        bookView: "bookView"
+      })
+    }
+    else {
+      this.setState({
+        displayImage: image,
+        bookView: ""
+      })
+    }
+    console.log('bookView', this.state.bookView);
   }
   render(){
     const blue = '#0741AD';
@@ -286,9 +352,9 @@ class Bookr extends React.Component{
     const babyblue='#78C0E0';
     const red = '#D82B21';
     const Links = {
-        liveSite: 'https://bookr-book-review.netlify.com/',
-        FEGithub: 'https://github.com/david-chua/Bookr-Front-End',
-        BEGithub: 'https://github.com/david-chua/Bookr-Back-End'
+        liveSite: 'https://bookr-book-app.netlify.com/',
+        FEGithub: 'https://github.com/david-chua/Bookr-FE',
+        BEGithub: 'https://github.com/david-chua/Bookr-BE'
       }
     return (
       <BookrContainer>
@@ -297,14 +363,14 @@ class Bookr extends React.Component{
           <Views>
             <h3> See other project views: </h3>
             <ViewButton onClick={() => this.setImage(homePage)}> Home </ViewButton>
-            <ViewButton onClick={() => this.setImage(info)} > Book Info </ViewButton>
-            <ViewButton onClick={() => this.setImage(review)}> Review </ViewButton>
-            <ViewButton onClick={() => this.setImage(edit)}> Edit </ViewButton>
+            <ViewButton onClick={() => this.setImage(booksPage)} > Books Page </ViewButton>
+            <ViewButton onClick={() => this.setImage(news)}> News </ViewButton>
+            <ViewButton onClick={() => this.setImage(bookView, "bookView")}> Book Results </ViewButton>
           </Views>
         </TechInfo>
 
         <HomeContainer>
-          <Home src={this.state.displayImage} alt="home" />
+          {this.state.bookView === '' ? <Home className={this.state.bookView} src={this.state.displayImage} alt="home" /> : <BookView src={this.state.displayImage} alt="bookView" />}
 
         </HomeContainer>
 

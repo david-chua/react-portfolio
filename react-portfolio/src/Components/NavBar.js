@@ -37,6 +37,7 @@ const NavLinksContainer = styled.div`
     width: 100%;
     flex-direction: column;
     text-align: center;
+    padding-right: 0;
   }
 `;
 
@@ -76,6 +77,10 @@ const NavLinks = styled(NavLink)`
       border-radius: 0px;
       background: #063A7C;
     }
+  }
+
+  @media(max-width: 768px){
+    padding: 20px 0;
   }
 `;
 

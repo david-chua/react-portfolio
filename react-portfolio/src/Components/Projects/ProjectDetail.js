@@ -18,6 +18,7 @@ class ProjectDetails extends React.Component{
         {id === 1 && <HelloMelon />}
         {id === 2 && <Bookr/>}
         {id === 3 && <TrainingForGains />}
+>
       </div>
     )
   }

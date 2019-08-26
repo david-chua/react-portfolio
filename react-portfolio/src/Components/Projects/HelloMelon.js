@@ -34,15 +34,35 @@ const CarouselContainer = styled.div`
   position: relative;
   overflow: hidden;
   margin-top: 16px;
+
+  @media(max-width: 768px){
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media(max-width: 414px){
+    width: 95%;
+  }
+
+  @media(max-width: 320px){
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
 `;
 
 const LogoImage = styled.img`
   margin: 0 auto;
   display: block;
   text-align: center;
+
+  @media(max-width: 320px){
+    width: 90%;
+  }
 `;
 
 const HelloHome = styled.img`
+
   width: 70vw;
   height: 80vh;
   margin: 0 auto;
@@ -54,6 +74,10 @@ const HelloHome = styled.img`
 
   @media(max-width: 1000px){
     height: 40vh;
+  }
+
+  @media(max-width: 414px){
+    width: 90%;
   }
 `;
 
@@ -73,15 +97,18 @@ const TechStackContainer = styled.div`
   background-image: url(${spread});
 
   @media (max-width: 800px){
+    width: 80%;
     height: 550px;
+  }
+
+  @media(max-width: 350px){
+    height: 620px;
   }
 
 `;
 const HelloTitle = styled.div`
   display: block;
-  @media (max-width: 800px){
-    height: 150px;
-  }
+
 
   h2 {
     text-align: center
@@ -89,6 +116,13 @@ const HelloTitle = styled.div`
     font-weight: bold;
     font-family: "Gill Sans MT";
     color: '#5E366A';
+  }
+  @media (max-width: 800px){
+    height: 150px;
+  }
+
+  @media(max-width: 350px){
+    height: 200px;
   }
 `;
 
@@ -103,6 +137,7 @@ const TechStack = styled.div`
   align-self: center;
 
   @media (max-width: 800px){
+    width: 80%;
     flex-direction: column;
   }
 `;
@@ -131,6 +166,7 @@ const AccomplishmentContainer = styled.div`
   width: 70%;
   margin: 0 auto;
 
+
 `;
 
 const Accomplishmenth2 = styled.h2`
@@ -140,6 +176,14 @@ const Accomplishmenth2 = styled.h2`
   font-family: "Gill Sans MT";
   color: '#60B5A9';
   text-decoration: underline;
+
+  @media(max-width: 768px){
+    font-size: 1.5em;
+  }
+
+  @media(max-width: 375px){
+    font-size: 1.8em;
+  }
 
 `;
 
@@ -214,7 +258,7 @@ class HelloMelon extends React.Component {
     const purple = '#5E366A';
     const green="#60B5A9";
     const Links = {
-        liveSite: 'https://nutrition-tracker-lambda.netlify.com/',
+        liveSite: 'https://hello-melon-lambda.netlify.com/',
         FEGithub: 'https://github.com/labspt3-nutrition-tracker/nutrition-tracker-FE',
         BEGithub: 'https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE'
       }
