@@ -95,6 +95,9 @@ const TechStackContainer = styled.div`
   height: 300px;
   margin: 0 auto;
   background-image: url(${spread});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media (max-width: 800px){
     width: 80%;
