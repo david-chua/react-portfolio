@@ -5,7 +5,6 @@ import userPage from './../../Assets/Images/Training/training_user.png';
 import workout from './../../Assets/Images/Training/training_workout_info.png';
 import create from './../../Assets/Images/Training/training_create_workout.png';
 import edit from './../../Assets/Images/Training/training_edit.png';
-import gym from './../../Assets/Images/Training/gym.png';
 import training from './../../Assets/Images/Training/training.png';
 import ProjectLinks from './ProjectLinks';
 
