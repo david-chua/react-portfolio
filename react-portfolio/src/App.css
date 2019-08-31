@@ -141,3 +141,16 @@ table {
 .bookraccomplishmenth2{
 	color: #0741AD;
 }
+
+.trainingAccomplishmenth2, .appTitle{
+	color: #828a30;
+}
+
+.trainingTitleh2{
+	color: #828a30;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}

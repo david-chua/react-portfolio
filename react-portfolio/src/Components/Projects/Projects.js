@@ -54,7 +54,11 @@ class Projects extends React.Component {
   constructor(props){
     super(props)
     this.state={
-      chosenProject: []
+      chosenProject: {
+          id: 1,
+          img: helloMelon,
+          title: 'Hello Melon'
+        }
     }
   }
 
