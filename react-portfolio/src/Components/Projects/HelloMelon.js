@@ -12,7 +12,6 @@ import ProjectLinks from './ProjectLinks';
 
 const HelloMelonContainer = styled.div`
   width: 100%;
-  height: 100vh;
   padding-top: 20px;
 
   h1 {

@@ -11,7 +11,6 @@ import ProjectLinks from './ProjectLinks';
 
 const TrainingForGainsContainer = styled.div`
   width: 100%;
-  height: 100vh;
   padding-top: 20px;
   margin: 30px auto;
 
