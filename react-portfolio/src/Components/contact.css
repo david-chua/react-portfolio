@@ -30,8 +30,6 @@
   margin-left: 30px;
 }
 
-
-
 .form_label{
   margin: 10px auto;
   text-align: left;
@@ -53,12 +51,57 @@
   color: #fff;
 }
 
-.iconContainer{
-}
-
 .socialIcon{
   width: 40px;
   height: 40px;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+@media(max-width: 768px){
+  .contact_container{
+    flex-direction: column;
+  }
+  .message_Form{
+    min-width: 500px;
+    max-width: 760px;
+    width: 100%;
+  }
+  .message_Form div img{
+    margin-left: 0 auto;
+  }
+
+  .contact_info{
+    max-width: 760px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+}
+
+@media(max-width: 414px){
+  .message_Form{
+    min-width: 400px;
+  }
+  .message_Form, .contact_info, .message_Form div img{
+    max-width: 400px;
+  }
+}
+
+@media(max-width: 375px){
+  .message_Form{
+    min-width: 375px;
+  }
+  .message_Form, .contact_info, .message_Form div img{
+    max-width: 360px;
+  }
+}
+
+@media(max-width: 320px){
+  .message_Form{
+    min-width: 315px;
+  }
+  .message_Form, .contact_info, .message_Form div img{
+    max-width: 315px;
+  }
 }
