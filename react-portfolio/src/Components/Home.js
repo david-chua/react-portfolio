@@ -124,7 +124,7 @@ const Home = () => {
                 What
               </LinkDiv>
             </StyledLink>
-            <StyledLink to="/experience" className="homewhere">
+            <StyledLink to="/contact" className="homewhere">
               <LinkDiv>
                 Where
               </LinkDiv>

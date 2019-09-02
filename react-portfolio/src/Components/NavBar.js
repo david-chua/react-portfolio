@@ -121,11 +121,7 @@ const NavBar = () => {
             Projects
            </NavLinkContainer>
         </NavLinks>
-        <NavLinks exact to="/experience">
-          <NavLinkContainer>
-            Experience
-          </NavLinkContainer>
-        </NavLinks>
+
         <NavLinks exact to="/contact">
           <NavLinkContainer>
             Contact
