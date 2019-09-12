@@ -414,7 +414,7 @@ class Bookr extends React.Component{
         </TechStackContainer>
 
         <AccomplishmentContainer>
-          <Accomplishmenth2 className="bookraccomplishmenth2"> Accomplishment </Accomplishmenth2>
+          <Accomplishmenth2 className="bookraccomplishmenth2"> Accomplishments </Accomplishmenth2>
             <AccomplishmentInfo>
               { this.state.accomplishments.map(accomplishment => {
                 return(

@@ -254,7 +254,7 @@ class TrainingForGains extends React.Component {
           </TechStackContainer>
 
           <AccomplishmentContainer>
-            <Accomplishmenth2 className="trainingAccomplishmenth2"> Accomplishment </Accomplishmenth2>
+            <Accomplishmenth2 className="trainingAccomplishmenth2"> Accomplishments </Accomplishmenth2>
               <AccomplishmentInfo>
                 { this.state.accomplishments.map(accomplishment => {
                   return(

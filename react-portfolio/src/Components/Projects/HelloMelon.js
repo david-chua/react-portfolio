@@ -312,7 +312,7 @@ class HelloMelon extends React.Component {
         </TechStackContainer>
 
         <AccomplishmentContainer>
-          <Accomplishmenth2 className="accomplishmenth2"> Accomplishment </Accomplishmenth2>
+          <Accomplishmenth2 className="accomplishmenth2"> Accomplishments </Accomplishmenth2>
             <AccomplishmentInfo>
               { this.state.accomplishments.map(accomplishment => {
                 return(
