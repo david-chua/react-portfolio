@@ -89,9 +89,9 @@ class Contact extends React.Component{
               <hr/>
               <h3> On the web:</h3>
               <div className="iconContainer">
-                <img className="socialIcon" src={github} alt="github"/>
-                <img className="socialIcon" src={linkedin} alt="linkedin"/>
-                <img className="socialIcon" src={wordpress} alt="wordpress"/>
+                <a target="_blank" href="https://github.com/david-chua"><img className="socialIcon" src={github} alt="github"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/dpchua/"><img className="socialIcon" src={linkedin} alt="linkedin"/></a>
+                <a target="_blank" href="https://whenlifebringsyoucode.wordpress.com/"><img className="socialIcon" src={wordpress} alt="wordpress"/></a>
               </div>
 
             </div>

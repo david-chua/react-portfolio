@@ -216,19 +216,3 @@ class About extends React.Component{
 }
 
 export default About;
-
-
-// <AboutContainer>
-//   <ImageContainer>
-//     <AboutImg src={require("./../Assets/Images/aboutme.png")} />
-//   </ImageContainer>
-//   <AboutInfoDiv>
-//     <AboutInfo>
-//       <h1> Hi, my name is <span> David Chua </span> </h1>
-//       <h2> I'm a full stack software developer with a love for all things React </h2>
-//       <h2> My passion with programming comes from idea that I can create anything I want with just the letters in my keyboard</h2>
-//       <h3> <span> Games</span> maybe, <span>Web Apps</span> or even...</h3>
-//       <h3><span>...Voice apps</span> are all within my fingertips,<br/> I just have to start typing</h3>
-//     </AboutInfo>
-//   </AboutInfoDiv>
-// </AboutContainer>
