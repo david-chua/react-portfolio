@@ -79,7 +79,7 @@ class Contact extends React.Component{
           <section className="contact_info">
             <div>
               <h2> Contact me </h2>
-              <p> If you want to collaborate or have a project you want to collaborate on, feel free to get in touch</p>
+              <p> If you want to collaborate or have a project you want to collaborate on, feel free to get in touch.</p>
 
               <h3> Email:</h3>
               <p> dpchua.dev@gmail.com</p>
