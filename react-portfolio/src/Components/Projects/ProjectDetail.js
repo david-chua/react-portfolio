@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import TrainingForGains from "./TrainingForGains";
 import HelloMelon from "./HelloMelon";
 import Bookr from "./Bookr";
