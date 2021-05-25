@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import ProjectItem from './ProjectItem';
 import ProjectDetails from './ProjectDetail';
 import trainingForGains from './../../Assets/Images/Mac/trainingforgains_mac.png';
-import cooking from './../../Assets/Images/Mac/cooking_user_mac.png';
 import helloMelon from './../../Assets/Images/Mac/hellomelon_mac.png';
 import bookr from './../../Assets/Images/Mac/bookr_mac.png';
 
@@ -23,13 +22,7 @@ const ProjectData = [
     id: 3,
     img: trainingForGains,
     title: 'Training For Gains'
-  },
-  // {
-  //   id: 4,
-  //   img: cooking,
-  //   title: "What's Cooking"
-  // }
-
+  }
 ]
 
 const ProjectMiniContainer = styled.div`
