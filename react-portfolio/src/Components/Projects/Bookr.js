@@ -331,7 +331,6 @@ class Bookr extends React.Component{
   }
 
   setImage = (image, type)  => {
-      console.log(type, 'type')
     if (type === "bookView"){
       this.setState({
         displayImage: image,
@@ -344,12 +343,9 @@ class Bookr extends React.Component{
         bookView: ""
       })
     }
-    console.log('bookView', this.state.bookView);
   }
   render(){
     const blue = '#0741AD';
-    const lightblue='#449DD1';
-    const babyblue='#78C0E0';
     const red = '#D82B21';
     const Links = {
         liveSite: 'https://bookr-book-app.netlify.com/',
@@ -358,7 +354,7 @@ class Bookr extends React.Component{
       }
     return (
       <BookrContainer>
-        <a className="link_title"><LogoImage src={logo}></LogoImage></a>
+        <a className="link_title" href={Links.liveSite}><LogoImage src={logo}></LogoImage></a>
         <TechInfo>
           <Views>
             <h3> See other project views: </h3>

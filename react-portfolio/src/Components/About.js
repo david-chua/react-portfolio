@@ -25,55 +25,6 @@ const AboutImg = styled.img`
   maring: 0 auto;
 `;
 
-// const AboutInfoDiv = styled.div`
-//   width: 50%;
-//   height: 100%;
-//   font-family: "Gill Sans MT";
-//   color: #F5F4E9;
-//   background: url(${smoke});
-//   background-repeat: no-repeat;
-//   background-size: 100% 100%;
-//
-//   @media(max-width: 1000px){
-//     width: 90%;
-//     color: black;
-//     height: 500px;
-//   }
-// `;
-//
-//
-// const AboutInfo = styled.div`
-//   width: 50%;
-//   font-family: "Gill Sans MT";
-//   margin: 30% auto;
-//   color: white;
-//
-//   & h1{
-//     text-align: center;
-//
-//     & span{
-//       color: #80A4ED;
-//       font-size: 1.7em;
-//     }
-//   }
-//
-//   & h3{
-//     text-align: center;
-//     font-size: 1.3em;
-//     & span{
-//       color: #80A4ED;
-//       font-size: 1.8em;
-//     }
-//   }
-//
-//   @media(max-width: 1000px){
-//     width: 100%;
-//     margin: 10% auto;
-//   }
-//
-// `;
-//
-
 
 class About extends React.Component{
   constructor(props){
@@ -100,7 +51,7 @@ class About extends React.Component{
             <br/>
             <p>If I'm not hacking away at my code or learning new technologies, you can probably find me doing one of three things: Sleeping, Eating, or Watching a movie.</p>
             <br />
-            <p>Want to know anything else? Just send me a message in my <a target="_blank" href="https://davidchua.me/contact">contact page</a>, stalk my <a target="_blank" href="https://github.com/david-chua">Github</a> profile so you know what I'm up to. Connect with me on <a target="_blank" href="https://www.linkedin.com/in/dpchua/">LinkedIn</a>. There's also my <a target="_blank" href="https://whenlifebringsyoucode.wordpress.com/">Wordpress</a> blog where I mostly blabber about what I'm currently doing or just explaining a piece of code that I just learned so I can analyze it and help others in learning that same code. </p>
+            <p>Want to know anything else? Just send me a message in my <a target="_blank" rel="noopener noreferrer" href="https://davidchua.me/contact">contact page</a>, stalk my <a target="_blank" rel="noopener noreferrer" href="https://github.com/david-chua">Github</a> profile so you know what I'm up to. Connect with me on <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dpchua/">LinkedIn</a>. There's also my <a target="_blank" rel="noopener noreferrer" href="https://whenlifebringsyoucode.wordpress.com/">Wordpress</a> blog where I mostly blabber about what I'm currently doing or just explaining a piece of code that I just learned so I can analyze it and help others in learning that same code. </p>
             <br />
             <p> PS, I'm also big on gaming and Anime, if that wasn't so obvious already.</p>
           </div>
@@ -205,7 +156,7 @@ class About extends React.Component{
                 <li><span>Sketch</span></li>
                 <li><span>Adobe Photoshop</span></li>
                 <li><span>InvisionApp</span></li>
-                <li><span>Photoshop</span></li>
+                <li><span>Adobe XD</span></li>
               </ul>
             </div>
           </div>
