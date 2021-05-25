@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import homePage from './../../Assets/Images/Training/training_for_gains.png';
-import userPage from './../../Assets/Images/Training/training_user.png';
-import workout from './../../Assets/Images/Training/training_workout_info.png';
-import create from './../../Assets/Images/Training/training_create_workout.png';
-import edit from './../../Assets/Images/Training/training_edit.png';
+// import userPage from './../../Assets/Images/Training/training_user.png';
+// import workout from './../../Assets/Images/Training/training_workout_info.png';
+// import create from './../../Assets/Images/Training/training_create_workout.png';
+// import edit from './../../Assets/Images/Training/training_edit.png';
 import training from './../../Assets/Images/Training/training.png';
 import ProjectLinks from './ProjectLinks';
 

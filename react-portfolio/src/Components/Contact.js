@@ -36,7 +36,6 @@ class Contact extends React.Component{
           message: '',
           success: 'Your message has been sent'
         })
-        console.log('it worked')
       })
       .catch(function (error) {
         console.log(error);
@@ -89,9 +88,9 @@ class Contact extends React.Component{
               <hr/>
               <h3> On the web:</h3>
               <div className="iconContainer">
-                <a target="_blank" href="https://github.com/david-chua"><img className="socialIcon" src={github} alt="github"/></a>
-                <a target="_blank" href="https://www.linkedin.com/in/dpchua/"><img className="socialIcon" src={linkedin} alt="linkedin"/></a>
-                <a target="_blank" href="https://whenlifebringsyoucode.wordpress.com/"><img className="socialIcon" src={wordpress} alt="wordpress"/></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/david-chua"><img className="socialIcon" src={github} alt="github"/></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dpchua/"><img className="socialIcon" src={linkedin} alt="linkedin"/></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://whenlifebringsyoucode.wordpress.com/"><img className="socialIcon" src={wordpress} alt="wordpress"/></a>
               </div>
 
             </div>
